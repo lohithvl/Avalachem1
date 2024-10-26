@@ -6,7 +6,7 @@ This code is used to explain how to fix errors using the require,assert and reve
 
 ## Description
 
-This Solidity smart contract named errors has three functions: Require(), Revert(), and Assert(). The Require() function uses the `require()` statement to check if the value of `z` is greater than 10. If it is not, the function throws an error. The Revert() function checks if the difference of `q` and `r` is greater than 10. If it is not, the function throws an error. Finally, the Assert() function uses the `assert()` statement to check if `n` is greater than zero. If it is not, the function throws an error.
+The `TaskManager` contract allows users to manage a limited number of tasks, with a maximum of three. Users can add tasks, mark them as complete, and reduce the task count. The `addTask` function enforces the maximum task limit using `require`. The `markTaskComplete` function reverts if there are no tasks available to complete. Finally, the `reduceTaskCount` function uses `require` to ensure that a task exists before decrementing the count, preventing negative values.
 
 
 ## Requirements
